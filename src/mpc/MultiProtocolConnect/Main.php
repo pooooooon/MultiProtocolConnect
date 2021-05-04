@@ -27,8 +27,8 @@ class Main extends PluginBase implements Listener {
 					 $pk->protocol = ProtocolInfo::CURRENT_PROTOCOL;
 				}elseif($pk->protocol >= 433){//437 block bug
 					 $event->setCancelled();
-					 $pk = new StartGamePacket;
-					 $datapacket($pk)
+					 $pk = new StartGamePacket();
+					 $player->sendDataPacket($pk, false, true);
 				}
 			}else{ 
 				$pk->protocol = ProtocolInfo::CURRENT_PROTOCOL;

@@ -12,13 +12,14 @@ use pocketmine\network\mcpe\protocol\types\Experiments;
 use pocketmine\network\mcpe\protocol\types\GameRuleType;
 use pocketmine\network\mcpe\protocol\types\GeneratorType;
 use pocketmine\network\mcpe\protocol\types\ItemTypeEntry;
+use pocketmine\network\mcpe\protocol\StartGamePacket as start
 use pocketmine\network\mcpe\protocol\types\MultiplayerGameVisibility;
 use pocketmine\network\mcpe\protocol\types\PlayerMovementSettings;
 use pocketmine\network\mcpe\protocol\types\PlayerPermissions;
 use pocketmine\network\mcpe\protocol\types\SpawnSettings;
 use function count;
 
-class StartGamePacket extends DataPacket{
+class StartGamePacket extends start{
 	public const NETWORK_ID = ProtocolInfo::START_GAME_PACKET;
 
 	/** @var int */
